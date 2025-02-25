@@ -30,8 +30,12 @@ This project is a backend API service built using Node.js, providing authenticat
    ```sh
    npm install
    ```
+3. Run latest migration
+   ```sh
+   knex migrate:latest
+   ```
 
-3. Create a `.env` file and configure your environment variables:
+4. Create a `.env` file and configure your environment variables:
    ```env
     NODE_ENV=local
     DB_NAME='auth_module'
@@ -50,7 +54,7 @@ This project is a backend API service built using Node.js, providing authenticat
     CLOUDFRONT_URL='https://d2vy4wa5cy7tze.cloudfront.net'
    ```
 
-4. Start the server:
+5. Start the server:
    ```sh
    npm run watch
    ```
