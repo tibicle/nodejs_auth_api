@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <lin <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+           
+            @media (max-width: 767px) {
+                .logo{
+                    width: 200px !important;
+                   
+                }
+                .logo img{
+                    width: 100%;
+                    height: 100%;
+                }
+                .bottom-bg{
+                    height: 50px !important;
+                }
+                .heading-text{
+                    font-size: 30px !important;
+                }
+                .email-details{
+                    font-size: 16px !important;
+                }
+            }
+        </style>
+    </head>
+<body style="font-family: 'Sora', sans-serif; ">
+    <table style="width: 100%; height: 100%; margin: 0 auto;">
+        <tbody>
+            <tr>
+                <td>
+                    <table style="width: 100%; height: 305px; background-image: url('<%= top_banner %>'); background-repeat: no-repeat; background-size: 100% 40%;">
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: top; width: 200px;"></td>
+                                <td style="margin: 0 auto; width: 100%; vertical-align:top">
+                                    <div class="logo" style="width: 300px; margin: 0 auto;text-align: center;padding: 78px 0px 30px; z-index: 1;">
+                                        <img style="display: block; width: 100%; height: 100%;  margin: auto; padding-top: 25px;" src="<%= logo %>">
+                                    </div>
+                                    <div style="width: 85%; max-width: 800px; margin: 0 auto; display: flex; justify-content: center; align-items: center; padding: 30px 0 40px; border-radius: 20px; border: 1px solid #EDEDED; box-shadow: 1px 1px 7px 0px #00000021; background-color: #FFFFFF;">
+                                        <div style="width: 100%; height: 100%;">
+                                            <h1 class="heading-text" style="font-size: 42px; font-weight: 900; margin-bottom: 25px; color: #000000; text-align: center;"><%= head_text %></h1>
+                                            <p class="email-details" style=" font-size: 24px;  font-weight: 700; color: #000000; padding-bottom: 25px; text-align: center; width: fit-content; margin: 0 auto;"><%= para_text %></p>
+                                            <hr style="width: 90%; height: 2px; background-color: #847DC9; margin: 0 auto; border: 0;">
+                                            <!-- <p style="font-size: 14px; font-weight: 400; color: #000000; margin: 36px 15px 40px 15px; text-align: center;">Link to reset password</p>
+                                            <h3 style="font-size: 22px; font-weight: 700; color: #000000; margin-bottom: 40px; text-align: center;">Forget Password</h3> -->
+                                            <div style="width: 90%; max-width: 480px;  display: flex; justify-content: center; align-items: center; background-color: #847DC9; border-radius: 8px; padding: 13px 37px; margin: 30px auto 30px auto; box-shadow: 0px 4px 4px 0px #00000040;">
+                                                <a href="<%= redirect_uri %>" style=" width: 100%; text-align: center; font-size: 15px; font-weight: 600; color: #fff; text-decoration: none;"><%= button_text %></a>
+                                            </div>
+                                            <p style=" font-size: 14px; font-weight: 400; color: #000000; text-align: center; margin: 0 20px 30px 20px;"><%= para_second_text %></p>
+                                            <!-- <div style="margin-bottom: 20px; width: 100%; display: flex; justify-content: center;">
+                                                <div style="margin:auto;display: flex; justify-content: center; align-items: center; gap: 30px;">
+                                                    <img src="<%= google %>" width="24" height="24" alt="">
+                                                    <img style="margin-left: 30px;" src="<%= facebook %>" width="24" height="24" alt="">
+                                                    <img style="margin-left: 30px;" src="<%= linkedin %>" width="24" height="24" alt="">
+                                                    <img style="margin-left: 30px;" src="<%= twitter %>" width="24" height="24" alt="">
+                                                </div>
+                                            </div> -->
+                                            
+                                            <div style="position: relative; display: flex; justify-content: center; align-items: flex-end; width: 100%; height: 186px;background-color: #847DC9 ;margin-bottom: 20px;">
+                                                <div style="margin: auto;">
+                                                    <img style="display: block; margin: auto;width: 88px;height:88px ;padding-top: 5px; " src="<%= bottom_image %>" alt="">
+                                                    <p class="email-details" style="font-size: 24px; font-weight: 700; color: #ffffff; text-align: center;">Cheers</p>
+                                                </div>
+                                            </div>
+                                           
+                                            <p style="font-size: 14px; font-weight: 400; color: #000000; text-align: center;"><%= query_text %></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="vertical-align: top; width: 200px;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

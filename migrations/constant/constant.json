@@ -1,0 +1,17 @@
+{
+    "status":{
+        "ACTIVE": "ACTIVE",
+        "DEACTIVE": "DEACTIVE"
+    },
+    "gender":{
+        "MALE": "MALE",
+        "FEMALE": "FEMALE",
+        "OTHERS": "OTHER"
+    },
+    "file_status":{
+        "PENDING": "PENDING",
+        "IN_PROGRESS": "IN_PROGRESS",
+        "COMPLETED": "COMPLETED",
+        "FAILED": "FAILED"
+    }
+}
