@@ -1,0 +1,974 @@
+{
+	"info": {
+		"_postman_id": "92d14d05-d96b-4652-9b88-998d9488677a",
+		"name": "Auth Module",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21256986"
+	},
+	"item": [
+		{
+			"name": "SingUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"first_name\":\"Bhavya\",\n\"last_name\":\"Nayak\",\n\"email\":\"bnayak@tibicle.com\",\n\"mobile_no\": \"8160823535\",\n\"gender\": \"MALE\",\n\"password\":\"Admin@123\",\n\"confirm_password\":\"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/signup",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SingUp Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"first_name\":\"Bhavya\",\n\"last_name\":\"Nayak\",\n\"email\":\"bnayak@tibicle.com\",\n\"mobile_no\": \"8160823535\",\n\"gender\": \"MALE\",\n\"password\":\"Admin@123\",\n\"confirm_password\":\"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-RJkz7YjLlKuA9G18Am7dHr1VFyQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 06:33:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"User exist with given email address\"\n}"
+				},
+				{
+					"name": "SingUp Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"first_name\":\"Bhavya\",\n\"last_name\":\"Nayak\",\n\"email\":\"bnayak@tibicle.com\",\n\"mobile_no\": \"8160823535\",\n\"gender\": \"MALE\",\n\"password\":\"Admin@123\",\n\"confirm_password\":\"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "954"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3ba-npo03jg/DuKycLWXXtifsl7V8nA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 06:40:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3V1aWQiOiI4ZWEyYjdhZC0yNjhiLTRhOTktYTZkMS1hMzM2MjA2YzE4YTAiLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwicGFuZWxfdHlwZSI6bnVsbCwiaWF0IjoxNzQwNDY1NjA3LCJleHAiOjE3NDA1NTIwMDd9.I3rWiVhgzurGR78cJdeaU4ET2YqkuvhTo2WUeFrmbJQ\",\n        \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3V1aWQiOiI4ZWEyYjdhZC0yNjhiLTRhOTktYTZkMS1hMzM2MjA2YzE4YTAiLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsInBhbmVsX3R5cGUiOm51bGwsImlhdCI6MTc0MDQ2NTYwNywiZXhwIjoxNzQxMDcwNDA3fQ.RPBadzgbPziV3CR5wfoQ_1dC7vkapEWq9JTOPRkRT6w\",\n        \"user\": {\n            \"uuid\": \"8ea2b7ad-268b-4a99-a6d1-a336206c18a0\",\n            \"email\": \"bnayak@tibicle.com\",\n            \"first_name\": \"Bhavya\",\n            \"last_name\": \"Nayak\",\n            \"gender\": \"MALE\",\n            \"date_of_birth\": null,\n            \"is_reset_on\": true,\n            \"status\": \"ACTIVE\",\n            \"file_uuid\": null,\n            \"mobile_no\": \"8160823535\",\n            \"google_id\": null,\n            \"facebook_id\": null,\n            \"apple_id\": null,\n            \"created_at\": \"2025-02-25T01:10:07.000Z\",\n            \"created_by\": null,\n            \"updated_at\": null,\n            \"updated_by\": null\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/user/me",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "262"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"106-b3rzZDSlR2008K3m7/HxX+uxBtU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 06:59:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"uuid\": \"8ea2b7ad-268b-4a99-a6d1-a336206c18a0\",\n        \"email\": \"bnayak@tibicle.com\",\n        \"first_name\": \"Bhavya\",\n        \"last_name\": \"Nayak\",\n        \"mobile_no\": \"8160823535\",\n        \"gender\": \"MALE\",\n        \"file_url\": \"https://d2vy4wa5cy7tze.cloudfront.net/1740466642580_rose.jpeg\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Profile Picture Upload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/home/tibicle-002/Downloads/rose.jpeg"
+						},
+						{
+							"key": "type",
+							"value": "PROFILE_PIC",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/s3/upload",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"s3",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "PROFILE_PIC",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Profile Picture Upload",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/home/tibicle-002/Downloads/rose.jpeg"
+								},
+								{
+									"key": "type",
+									"value": "PROFILE_PIC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/s3/upload",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"s3",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "PROFILE_PIC",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "261"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"105-gzJf/nrAOXlrn5whsu5G1COgMeQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 06:57:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"url\": \"https://video-fredo-dev.s3.us-east-1.amazonaws.com/1740466642580_rose.jpeg\",\n            \"name\": \"1740466642580_rose.jpeg\",\n            \"type\": \"image/jpeg\",\n            \"uuid\": \"6790f049-ba7a-4329-aa3c-a7607a8aea89\"\n        }\n    ],\n    \"message\": \"File has been uploaded successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "SingIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bnayak@tibicle.com\",\n    \"password\":\"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SingIn Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"bnayak@tibicle.com\",\n    \"password\":\"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "751"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2ef-BaeoVFcLmqUqU41E1DmZ41fRrD0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 06:59:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3V1aWQiOiI4ZWEyYjdhZC0yNjhiLTRhOTktYTZkMS1hMzM2MjA2YzE4YTAiLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwicGFuZWxfdHlwZSI6bnVsbCwiaWF0IjoxNzQwNDY2Nzg3LCJleHAiOjE3NDA1NTMxODd9.ltgJFYuMC_IFYpeLNuMR6yKaE8omz9ExXvrDSFJHqRo\",\n        \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3V1aWQiOiI4ZWEyYjdhZC0yNjhiLTRhOTktYTZkMS1hMzM2MjA2YzE4YTAiLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsInBhbmVsX3R5cGUiOm51bGwsImlhdCI6MTc0MDQ2Njc4NywiZXhwIjoxNzQxMDcxNTg3fQ.JlK7Y3pDg5QftVxjmyRsU39Y_-riypjdpIIyJt0DwbA\",\n        \"user\": {\n            \"uuid\": \"8ea2b7ad-268b-4a99-a6d1-a336206c18a0\",\n            \"first_name\": \"Bhavya\",\n            \"last_name\": \"Nayak\",\n            \"email\": \"bnayak@tibicle.com\",\n            \"gender\": \"MALE\",\n            \"status\": \"ACTIVE\",\n            \"mobile_no\": \"8160823535\"\n        }\n    }\n}"
+				},
+				{
+					"name": "SingIn Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"bnayak@tibicle.com\",\n    \"password\":\"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-bMcKeE5qeJU6eE15LrZ0ZjO21AI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 07:13:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid Email or Password\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"bnayak@tibicle.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/forget_password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"forget_password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Forgot Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"bnayak@tibicle.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/forget_password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"forget_password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"37-hV91yKj2OXmkeDhnjND03aljEjo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 07:09:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"code\": \"ZMQSA1HCsCsMPAnE\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"ZMQSA1HCsCsMPAnE\",\n    \"password\": \"Admin@12345\",\n    \"confirm_password\": \"Admin@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/reset_password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"reset_password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Reset Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"ZMQSA1HCsCsMPAnE\",\n    \"password\": \"Admin@12345\",\n    \"confirm_password\": \"Admin@12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/reset_password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"reset_password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"56-9gFUR6DiGGHp7OOphYUNNFoezQk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 07:13:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {},\n    \"message\": \"Your password has been changed successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"old_password\": \"Admin@12345\",\n    \"password\": \"Admin@123\",\n    \"confirm_password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/change_password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"change_password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Change Password Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"Admin@123\",\n    \"password\": \"Admin@123\",\n    \"confirm_password\": \"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/change_password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"change_password"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-lhRtcNFQIDCQOZw2BHmnDEn8FPY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 07:15:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Your old password is incorrect\"\n}"
+				},
+				{
+					"name": "Change Password Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"Admin@12345\",\n    \"password\": \"Admin@123\",\n    \"confirm_password\": \"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/change_password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"change_password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin,X-Requested-With,content-type,Authorization,authentication-token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"56-9gFUR6DiGGHp7OOphYUNNFoezQk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Feb 2025 07:16:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {},\n    \"message\": \"Your password has been changed successfully\"\n}"
+				}
+			]
+		}
+	]
+}
